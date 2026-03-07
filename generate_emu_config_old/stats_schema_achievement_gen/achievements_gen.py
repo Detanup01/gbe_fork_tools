@@ -34,8 +34,10 @@ def generate_stats_achievements(
                         value = ach['display'][x]
                         if f'{x}'.lower() == 'name':
                             x = 'displayName'
+                            value = {k: str(v) for k, v in value.items()}
                         elif f'{x}'.lower() == 'desc':
                             x = 'description'
+                            value = {k: str(v) for k, v in value.items()}
                         elif x == 'Hidden' or f'{x}'.lower() == 'hidden':
                             x = 'hidden'
                             try:
