@@ -344,7 +344,7 @@ def download_achievement_images(game_id : int, image_names : set[str], output_fo
                 return
             
             succeeded = False
-            for u in ["https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/", "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/"]:
+            for u in ["https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/", "https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/apps/", "https://shared.akamai.steamstatic.com/community_assets/images/apps/", "https://shared.fastly.steamstatic.com/community_assets/images/apps/"]:
                 url = "{}{}/{}".format(u, game_id, name)
                 try:
                     response = requests.get(url, allow_redirects=True)
